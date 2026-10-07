@@ -13,6 +13,8 @@
     })(window, document, 'script', 'dataLayer', 'GTM-NDRDR22M');</script>
   <!-- End Google Tag Manager -->
   <meta charset="utf-8">
+  <link rel="preload" as="image" type="image/webp" href="../assets/images/pensao-alimenticia/hero-pensao-alimenticia-900.webp" media="(max-width: 899px)" fetchpriority="high">
+  <link rel="preload" as="image" type="image/webp" href="../assets/images/pensao-alimenticia/hero-pensao-alimenticia.webp" media="(min-width: 900px)" fetchpriority="high">
   <link rel="icon" type="image/png" href="../fav-ico.png">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -64,11 +66,6 @@
     a {
       color: inherit;
       text-decoration: none;
-    }
-
-    button,
-    summary {
-      font: inherit;
     }
 
     .page {
@@ -123,20 +120,6 @@
       object-fit: contain;
     }
 
-    .nav-link {
-      display: none;
-      align-items: center;
-      gap: 8px;
-      min-height: 40px;
-      padding: 0 14px;
-      border: 1px solid rgba(216, 176, 138, .38);
-      border-radius: 999px;
-      color: rgba(255, 255, 255, .9);
-      font-size: .86rem;
-      font-weight: 700;
-      backdrop-filter: blur(12px);
-    }
-
     .hero {
       position: relative;
       display: flex;
@@ -148,7 +131,7 @@
       color: var(--white);
       background:
         linear-gradient(180deg, rgba(20, 20, 20, .78), rgba(20, 20, 20, .84)),
-        url("../assets/images/pensao-alimenticia/hero-pensao-alimenticia.png") 72% center / cover no-repeat;
+        url("../assets/images/pensao-alimenticia/hero-pensao-alimenticia-900.webp") 72% center / cover no-repeat;
     }
 
     .hero-mark {
@@ -214,7 +197,6 @@
 
     h1,
     h2,
-    h3,
     p {
       margin: 0;
     }
@@ -316,57 +298,7 @@
       flex: 0 0 auto;
     }
 
-    .trust-row {
-      overflow: hidden;
-      width: 100%;
-      background:
-        linear-gradient(90deg, #1F1F1F 0%, #3a3a3a 30%, #545454 50%, #3a3a3a 70%, #1F1F1F 100%);
-      border-top: 1px solid rgba(216, 176, 138, .22);
-      border-bottom: 1px solid rgba(216, 176, 138, .22);
-    }
-
-    .trust-track {
-      display: flex;
-      width: max-content;
-      animation: trust-marquee 13s linear infinite;
-    }
-
-    .trust-item {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      min-height: 62px;
-      padding: 16px 26px;
-      color: transparent;
-      background: linear-gradient(110deg, var(--gold) 0%, #EAD3B8 50%, var(--gold) 100%);
-      background-clip: text;
-      -webkit-background-clip: text;
-      font-size: .9rem;
-      font-weight: 700;
-      white-space: nowrap;
-    }
-
-    .trust-item svg {
-      width: 20px;
-      height: 20px;
-      color: var(--gold);
-      flex: 0 0 auto;
-    }
-
-    @keyframes trust-marquee {
-      from {
-        transform: translate3d(0, 0, 0);
-      }
-
-      to {
-        transform: translate3d(-50%, 0, 0);
-      }
-    }
-
-    .pain,
-    .method,
-    .about,
-    .faq {
+    .pain {
       padding: 70px 0;
     }
 
@@ -449,15 +381,10 @@
       height: 18px;
     }
 
-    .pain-actions,
-    .method-action {
+    .pain-actions {
       display: grid;
       gap: 18px;
       justify-items: center;
-    }
-
-    .method-action {
-      margin-top: 48px;
     }
 
     .section-action {
@@ -466,342 +393,13 @@
       margin: 6px auto 0;
     }
 
-    .method {
-      background: var(--warm);
-      border-block: 1px solid var(--line);
-    }
-
-    .method-head {
-      display: grid;
-      gap: 18px;
-      margin-bottom: 42px;
-      justify-items: center;
-      text-align: center;
-    }
-
-    .steps {
-      display: grid;
-      gap: 14px;
-      counter-reset: step;
-    }
-
-    .step {
-      position: relative;
-      display: grid;
-      grid-template-columns: 46px 1fr;
-      gap: 14px;
-      padding: 18px 0;
-      border-bottom: 1px solid rgba(214, 172, 134, .28);
-      counter-increment: step;
-    }
-
-    .step:last-child {
-      border-bottom: 0;
-    }
-
-    .step-icon {
-      display: grid;
-      place-items: center;
-      width: 46px;
-      height: 46px;
-      border: 1px solid rgba(214, 172, 134, .34);
-      border-radius: var(--radius);
-      background: rgba(255, 255, 255, .55);
-      color: #C09A6F;
-    }
-
-    .step-icon svg {
-      width: 21px;
-      height: 21px;
-    }
-
-    .step h3 {
-      display: flex;
-      align-items: baseline;
-      gap: 10px;
-      margin-bottom: 5px;
-      color: var(--ink);
-      font-size: 1rem;
-      line-height: 1.3;
-    }
-
-    .step h3::before {
-      content: "0" counter(step);
-      color: #C09A6F;
-      font-size: .73rem;
-      font-weight: 900;
-      letter-spacing: .08em;
-    }
-
-    .step p {
-      color: var(--muted);
-      font-size: 1.125rem;
-    }
-
-    .faq {
-      background: var(--paper);
-    }
-
-    .faq-grid {
-      display: grid;
-      gap: 28px;
-    }
-
-    .faq-list {
-      display: grid;
-      gap: 10px;
-    }
-
-    details {
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: var(--white);
-      box-shadow: 0 16px 38px rgba(17, 17, 17, .045);
-    }
-
-    summary {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      min-height: 64px;
-      padding: 17px 18px;
-      color: var(--ink);
-      font-weight: 850;
-      cursor: pointer;
-      list-style: none;
-    }
-
-    summary::-webkit-details-marker {
-      display: none;
-    }
-
-    summary svg {
-      width: 18px;
-      height: 18px;
-      color: #C09A6F;
-      flex: 0 0 auto;
-      transition: transform .2s ease;
-    }
-
-    details[open] summary svg {
-      transform: rotate(45deg);
-    }
-
-    details p {
-      padding: 0 18px 18px;
-      color: var(--muted);
-      font-size: 1.125rem;
-    }
-
-    .about {
-      background: var(--paper);
-      border-top: 1px solid var(--line);
-    }
-
-    .about-grid {
-      display: grid;
-      gap: 28px;
-      justify-items: center;
-    }
-
-    .about-card {
-      overflow: hidden;
-      width: min(100%, 560px);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: var(--white);
-      box-shadow: var(--shadow);
-    }
-
-    .about-card-photo {
-      position: relative;
-      display: grid;
-      place-items: center;
-      height: 280px;
-      background:
-        radial-gradient(60% 70% at 78% 18%, rgba(216, 176, 138, .18), transparent 62%),
-        linear-gradient(160deg, #2a2a2a 0%, #1F1F1F 55%, #161616 100%);
-      overflow: hidden;
-    }
-
-    .about-card-photo img {
-      position: relative;
-      z-index: 1;
-      height: 160px;
-      width: auto;
-      max-width: 80%;
-      object-fit: contain;
-      opacity: .95;
-    }
-
-    .about-card-name {
-      position: absolute;
-      z-index: 2;
-      left: 20px;
-      bottom: 16px;
-      color: var(--white);
-    }
-
-    .about-card-name strong {
-      display: block;
-      color: var(--white);
-      font-family: "Cormorant Garamond", Georgia, serif;
-      font-size: 1.45rem;
-      font-weight: 600;
-    }
-
-    .about-card-name span {
-      color: var(--gold-dark);
-      font-size: .72rem;
-      font-weight: 800;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-    }
-
-    .about-card-body {
-      padding: 22px;
-    }
-
-    .about-bio {
-      color: var(--muted);
-      font-size: 1rem;
-    }
-
-    .reviews {
-      padding: 70px 0;
-      background: var(--warm);
-      border-block: 1px solid var(--line);
-    }
-
-    .reviews-carousel {
-      position: relative;
-    }
-
-    .reviews-track {
-      display: flex;
-      gap: 14px;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      scroll-behavior: smooth;
-      padding: 4px 4px 18px;
-      scrollbar-width: none;
-    }
-
-    .reviews-track::-webkit-scrollbar {
-      display: none;
-    }
-
-    .review-card {
-      display: flex;
-      flex: 0 0 min(100%, 320px);
-      flex-direction: column;
-      gap: 12px;
-      padding: 22px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: var(--white);
-      box-shadow: 0 16px 38px rgba(17, 17, 17, .05);
-      scroll-snap-align: start;
-    }
-
-    .review-head {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .review-avatar {
-      display: grid;
-      place-items: center;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: linear-gradient(160deg, #1F1F1F 0%, #3a3a3a 100%);
-      color: var(--gold-dark);
-      font-family: "Cormorant Garamond", Georgia, serif;
-      font-size: 1.15rem;
-      font-weight: 600;
-      flex: 0 0 auto;
-    }
-
-    .review-id strong {
-      display: block;
-      color: var(--ink);
-      font-size: .95rem;
-    }
-
-    .review-id span {
-      color: var(--muted);
-      font-size: .78rem;
-    }
-
-    .review-stars {
-      color: #D8A94D;
-      font-size: 1.05rem;
-      letter-spacing: 2px;
-      line-height: 1;
-    }
-
-    .review-stars .star-off {
-      opacity: .25;
-    }
-
-    .review-text {
-      color: var(--muted);
-      font-size: 1rem;
-    }
-
-    .reviews-arrow {
-      position: absolute;
-      z-index: 2;
-      top: 50%;
-      display: none;
-      place-items: center;
-      width: 42px;
-      height: 42px;
-      border: 1px solid var(--line);
-      border-radius: 50%;
-      background: var(--white);
-      color: var(--ink);
-      cursor: pointer;
-      box-shadow: 0 10px 24px rgba(17, 17, 17, .14);
-      transform: translateY(-50%);
-      transition: transform .2s ease, box-shadow .2s ease;
-    }
-
-    .reviews-arrow:hover {
-      transform: translateY(calc(-50% - 2px));
-      box-shadow: 0 14px 28px rgba(17, 17, 17, .18);
-    }
-
-    .reviews-arrow svg {
-      width: 18px;
-      height: 18px;
-    }
-
-    .reviews-arrow.prev {
-      left: -10px;
-    }
-
-    .reviews-arrow.next {
-      right: -10px;
-    }
-
-    @media (min-width: 620px) {
-      .reviews-arrow {
-        display: grid;
-      }
-    }
-
     .final-cta {
       position: relative;
       padding: 72px 0 92px;
       color: var(--white);
       background:
         linear-gradient(180deg, rgba(20, 20, 20, .86), rgba(20, 20, 20, .9)),
-        url("../assets/images/pensao-alimenticia/despesas-filho.png") center / cover no-repeat,
+        url("../assets/images/pensao-alimenticia/despesas-filho-800.webp") center / cover no-repeat,
         var(--coal);
       isolation: isolate;
     }
@@ -890,10 +488,6 @@
         --container: min(1120px, calc(100vw - 56px));
       }
 
-      .nav-link {
-        display: inline-flex;
-      }
-
       .hero-actions {
         width: fit-content;
       }
@@ -901,15 +495,6 @@
       .button,
       .section-action {
         width: fit-content;
-      }
-
-      .trust-item {
-        padding: 18px 34px;
-        border-left: 1px solid rgba(255, 255, 255, .12);
-      }
-
-      .trust-item:first-child {
-        border-left: 0;
       }
     }
 
@@ -946,7 +531,7 @@
         min-height: 0;
         background:
           linear-gradient(90deg, rgba(18, 18, 18, .94) 0%, rgba(18, 18, 18, .82) 43%, rgba(18, 18, 18, .26) 100%),
-          url("../assets/images/pensao-alimenticia/hero-pensao-alimenticia.png") right center / cover no-repeat;
+          url("../assets/images/pensao-alimenticia/hero-pensao-alimenticia.webp") right center / cover no-repeat;
       }
 
       .hero-mark {
@@ -1000,70 +585,25 @@
         font-size: 1.25rem;
       }
 
-      .pain,
-      .method,
-      .about,
-      .faq,
-      .reviews {
+      .pain {
         padding: 98px 0;
       }
 
-      .reviews-track {
-        gap: 18px;
-      }
-
-      .review-card {
-        flex-basis: calc((100% - 36px) / 3);
-      }
-
-      .pain-grid,
-      .faq-grid {
+      .pain-grid {
         grid-template-columns: minmax(0, .9fr) minmax(360px, 1fr);
         align-items: start;
         gap: 72px;
-      }
-
-      .about-card-photo {
-        height: 320px;
-      }
-
-      .method-head {
-        grid-template-columns: 1fr;
-        justify-items: center;
-        text-align: center;
-        gap: 22px;
-        margin-bottom: 64px;
       }
 
       .section-title {
         font-size: clamp(2.7rem, 3.7vw, 3.6rem);
       }
 
-      .steps {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 0;
-        border-top: 1px solid rgba(214, 172, 134, .28);
-        border-bottom: 1px solid rgba(214, 172, 134, .28);
-      }
-
-      .step {
-        grid-template-columns: 1fr;
-        align-content: start;
-        min-height: 250px;
-        padding: 28px 22px;
-        border-right: 1px solid rgba(214, 172, 134, .28);
-        border-bottom: 0;
-      }
-
-      .step:last-child {
-        border-right: 0;
-      }
-
       .final-cta {
         padding: 98px 0;
         background:
           linear-gradient(90deg, rgba(18, 18, 18, .94) 0%, rgba(18, 18, 18, .84) 50%, rgba(18, 18, 18, .6) 100%),
-          url("../assets/images/pensao-alimenticia/despesas-filho.png") center / cover no-repeat,
+          url("../assets/images/pensao-alimenticia/despesas-filho.webp") center / cover no-repeat,
           var(--coal);
       }
 
@@ -1133,7 +673,8 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .fade-up, .hero-copy > * {
+      .fade-up,
+      .hero-copy > * {
         animation: none !important;
         transition: none !important;
         opacity: 1 !important;
@@ -1145,10 +686,6 @@
       *::after {
         scroll-behavior: auto !important;
         transition: none !important;
-      }
-
-      .trust-track {
-        animation: none;
       }
     }
     /* LP Pensão */
@@ -1180,7 +717,7 @@
   </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap"
     rel="stylesheet">
 </head>
 
@@ -1193,14 +730,14 @@
     <header class="site-header" aria-label="Cabecalho">
       <div class="container nav">
         <a class="brand" href="#top" aria-label="Tairone Carvalho Advocacia">
-          <img class="brand-mark" src="../logo-3.png" alt="Tairone Carvalho Advocacia" width="165" height="52">
+          <img class="brand-mark" src="../assets/images/pensao-alimenticia/logo.webp" alt="Tairone Carvalho Advocacia" width="165" height="53" decoding="async">
         </a>
       </div>
     </header>
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
-        <img class="hero-mark" src="../fav-ico.png" alt="" aria-hidden="true">
+        <img class="hero-mark" src="../assets/images/pensao-alimenticia/monograma.webp" alt="" aria-hidden="true" width="216" height="305" decoding="async">
 
         <div class="container hero-inner">
           <div class="hero-copy">
